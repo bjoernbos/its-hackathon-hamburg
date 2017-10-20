@@ -49,6 +49,6 @@ intersection AS (
     gleise_intersects db,
     wald_polys wp
 )
-SELECT * FROM gleise_within g
+SELECT g.geom FROM gleise_within g
 UNION
-SELECT * FROM intersection;
+SELECT geom FROM intersection;

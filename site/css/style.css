@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -247,6 +247,11 @@ h1, h2, h3, h4, h5, h6 {
 .fh5co-section {
   padding: 2em 0;
 }
+
+.fh5co-section.xlarge {
+  padding: 5em 0;
+}
+
 @media screen and (max-width: 768px) {
   .fh5co-section {
     padding: 3em 0;
@@ -266,7 +271,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
 }
 .fh5co-feature .fh5co-icon i {
-  color: #52d3aa;
+  color: rgb(50,20,15);
   font-size: 70px;
 }
 @media screen and (max-width: 1200px) {

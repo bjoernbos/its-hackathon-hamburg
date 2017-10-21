@@ -1565,7 +1565,7 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 18px;
+  font-size: 25px;
 }
 
 h5, .h5 {
@@ -1973,10 +1973,10 @@ pre code {
   clear: both;
 }
 
-.row {
+/*.row {
   margin-left: -20px;
   margin-right: -20px;
-}
+}*/
 .row:before, .row:after {
   content: " ";
   display: table;

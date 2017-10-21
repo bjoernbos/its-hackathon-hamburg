@@ -62,6 +62,13 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+ <!-- Wow.js for animation on scroll -->
+	<script src="js/wow.min.js"></script>
+  <script>
+      new WOW().init();
+  </script>
+
+
 	</head>
 	<body>
 
@@ -96,19 +103,19 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-3">
-						<h4><center>1</center></h4>
+						<h4 class="animated infinite pulse"><center>1</center></h4>
 						<p><center>Sturm</center></p>
 					</div>
 					<div class="col-md-3">
-						<h4><center> >10.000 km</center></h4>
+						<h4 class="animated infinite pulse"><center> >10.000 km</center></h4>
 						<p><center>unbefahrbare Strecken</center></p>
 					</div>
 					<div class="col-md-3">
-						<h4><center> >2 Tage</center></h4>
+						<h4 class="animated infinite pulse"><center> >2 Tage</center></h4>
 						<p><center>Aufräumarbeiten</center></p>
 					</div>
 					<div class="col-md-3">
-						<h4><center>~101.000</center></h4>
+						<h4 class="animated infinite pulse"><center>~101.000</center></h4>
 						<p><center>betroffene Pendler <br> nur in Hamburg</center></p>
 					</div>
 				</div>
@@ -127,12 +134,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<h2>Das Streckennetz</h2>
+						<h2 class="wow slideInUp">Das Streckennetz</h2>
 						<p>Die Deutsche Bahn unterhält mit über 33.000 km das längste Eisenbahn-Schienennetz in Europa. Insbesondere bei Stürmen und wetterbedingten Ausfällen sorgen bis zu 41.000 Mitarbeiter für die Wiederherstellung des regulären Fahrbetriebes.</p>
 						<p>Da sich täglich rund 4,5 Millionen Pendler auf den einwandfreien Betrieb verlassen, stellt die Bahninfrastruktur einen entscheidenend Stellenwert für die Wirtschaft dar. Neben der DB Netz AG und den Eisenbahnverkehrunternehmen leiden daher ein Großteil der Unternehmen unmittelbar von Schäden an der Bahninfrastruktur.</p>
 					</div>
 					<div class="col-md-6">
-						<img src="images/d_railways.png" alt="Free HTML5 by FreeHTML5.co" class="img-responsive">
+						<div class="wow slideInUp">
+							<img src="images/d_railways.png" alt="Free HTML5 by FreeHTML5.co" class="img-responsive">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -142,10 +151,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<img src="images/d_forests.png" alt="Free HTML5 by FreeHTML5.co" class="img-responsive">
+						<div class="wow slideInUp">
+							<img src="images/d_forests.png" alt="Free HTML5 by FreeHTML5.co" class="img-responsive">
+						</div>
 					</div>
 					<div class="col-md-6">
-						<h2>Der deutsche Wald</h2>
+						<h2 class="wow slideInUp">Der deutsche Wald</h2>
 						<p>Obwohl wiederholt Streckenabschnitte durch umgestürzte Bäume gesperrt werden müssen, gibt es gute Gründe Bäume in der Nähe von Strecken zu belassen. Denn der Wald bietet nicht nur der Tier- und Pflanzenwelt einen Schutz, sondern auch Zügen.</p>
 						<p>Insbesondere für Hochgeschwindigkeitszüge stellen <a href="https://de.wikipedia.org/wiki/Seitenwindstabilität">Seitenwinde</a> eine Gefahr da. Da die Angrifffläche im Verhältnis zur Spurweite sehr groß ist, gilt es ein Umkippen um jeden Fall zu verhindern. Neben Geschwindigkeitslimits und technischen Lösungen können Bäume und Wälder die Seitenwindstabilität daher zum Teil begünstigen.</p>
 					</div>
@@ -157,12 +168,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<h2>Welche Strecken gefährdet sind</h2>
+						<h2 class="wow slideInUp">Welche Strecken gefährdet sind</h2>
 						<p>Unsere Analyse hat ergeben, dass vor allem Strecken im … Deutschlands gefährdet sind.</p>
 						<p>Hier folgt eine Erklärung der Karte</p>
 					</div>
 					<div class="col-md-6">
-						<img src="images/d_railways.png" alt="Free HTML5 by FreeHTML5.co" class="img-responsive">
+						<div class="wow slideInUp">
+							<img src="images/d_railways.png" alt="Free HTML5 by FreeHTML5.co" class="img-responsive">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -191,7 +204,7 @@
 								<i class="icon-circle-compass"></i>
 							</div>
 							<div class="fh5co-text">
-								<h3>Distanz zur Strecke &amp; Oberleitung</h3>
+								<h3 class="wow slideInUp">Distanz zur Strecke &amp; Oberleitung</h3>
 								<p>Bäume können eine Gefahr für den Bahnverkehr darstellen, wenn sie höher sind als ihre Distanz zur Strecke.</p>
 							</div>
 						</div>
@@ -202,7 +215,7 @@
 								<i class="icon-layers"></i>
 							</div>
 							<div class="fh5co-text">
-								<h3>Wurzeltiefe</h3>
+								<h3 class="wow slideInUp">Wurzeltiefe</h3>
 								<p>Man unterscheidet bei Bäumen zwischen Pfahl-, Herz- und Flachwurzlern, wobei das größte Risiko im Sturm von den Flachwurzlern ausgeht.</p>
 							</div>
 						</div>
@@ -214,7 +227,7 @@
 								<i class="icon-grid"></i>
 							</div>
 							<div class="fh5co-text">
-								<h3>Bodenbeschaffenheit</h3>
+								<h3 class="wow slideInUp">Bodenbeschaffenheit</h3>
 								<p>Lockere Sandböden geben Bäumen in der Regel weniger Halt als schwere Lehmböden. </p>
 							</div>
 						</div>
@@ -225,7 +238,7 @@
 								<i class="icon-compass2"></i>
 							</div>
 							<div class="fh5co-text">
-								<h3>Windstärke &amp; -richtung</h3>
+								<h3 class="wow slideInUp">Windstärke &amp; -richtung</h3>
 								<p>Letztlich entscheidet natürlich die Windstärke darüber, ob ein Baum eine Gefahr für den Bahn darstellt. </p>
 							</div>
 						</div>
@@ -282,18 +295,43 @@
 					</div>
 				</div>
 
-
-
 				<div class="row">
 					<div class="col-md-12">
-
 						<iframe width="100%" height="650" frameborder="0" src="https://akeem.carto.com/viz/403e835d-b9b9-4237-aa16-fb6ef44a8ca2/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
-
 					</div>
 				</div>
 
+			<div class="fh5co-section">
+				<div class="container">
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-6">
+								<h2>Eine Simulation von umgefallenen Bäumen</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<p>Weiß man die Windrichtung und Höhe der Bäume, kann man einfach simulieren, welche Bäume das Streckennetz gefährden können.</p>
+					</div>
+						<div class="col-md-6">
+						<p>Nutze die Karte um risikogefährdete Streckenabschnitte zu bestimmen.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+							<iframe width="100%" height="650" frameborder="0" src="http://46.101.153.57/karte/karte.html" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+					</div>
+				</div>
 			</div>
+			</div>
+
 		</div>
+	</div>
 
 	</div> <!-- END fh5co-wrap -->
 
@@ -356,8 +394,6 @@
 	<script src="js/jquery.stellar.min.js"></script>
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
-
-	<script>$('#animation-xx').addClass('animated infinite bounce')</script>
 
 	</body>
 </html>

@@ -3160,7 +3160,7 @@ Copyright (c) 2015 Daniel Eden
 
 .slideInUp {
   -webkit-animation-name: slideInUp;
-  animation-name: slideInUp;
+  animation-name: slideInUp; 
 }
 
 @-webkit-keyframes slideOutDown {

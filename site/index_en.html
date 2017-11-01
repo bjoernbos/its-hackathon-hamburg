@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>The shallow root situation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The shallow root situation" />
+	<meta name="keywords" content="Flachwurzelsituation, Flachwurzler, DB Hackathon, ITS Hackathon, Xavier, Sturmschäden, Deutsche Bahn" />
+	<meta name="author" content="Volker, Moritz, Achim, Björn" />
+
+  <!--
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE
+	DESIGNED & DEVELOPED by FreeHTML5.co
+
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+ <!-- Wow.js for animations -->
+	<script src="js/wow.min.js"></script>
+  <script>
+      new WOW().init();
+  </script>
+	</head>
+	<body>
+	
+	<div class="corner-ribbon top-left sticky red"><a target="_blank" href="https://dbmindbox.com/de/db-opendata-hackathons/hackathons/design-the-smart-mobility-its-hackathon-hamburg-2021102017-mindspace-hamburg/">1. Prize</a></div>
+	
+	<div id="fh5co-wrap">
+		<header id="fh5co-header">
+			<div class="container">
+				<nav class="fh5co-main-nav">
+					<ul>
+						<li class="fh5co-active"><a href="index.html"><span>Home</span></a></li>
+						<li><a href="#deutschland"><span>The rail network</span></a></li>
+						<li><a href="#gefahren"><span>Dangers</span></a></li>
+						<li><a href="#hamburg"><span>Hamburg</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<div class="fh5co-hero" style="background-image: url(images/header_trees_vignette-min.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+						<div class="fh5co-intro fh5co-table-cell">
+							<h1 class="text-center">the shallow root situation</h1>
+							<p>Which railway lines are at risk from storms?<br>
+							Proof of Concept Demo as part of the ITS Hackathon 2017</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fh5co-section xlarge">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<h4 class="animated infinite pulse"><center>1</center></h4>
+						<p><center>Storm</center></p>
+					</div>
+					<div class="col-md-3">
+						<h4 class="animated infinite pulse"><center> >10.000 km</center></h4>
+						<p><center>impassable routes</center></p>
+					</div>
+					<div class="col-md-3">
+						<h4 class="animated infinite pulse"><center> >2 days</center></h4>
+						<p><center>cleanup work</center></p>
+					</div>
+					<div class="col-md-3">
+						<h4 class="animated infinite pulse"><center>~101.000</center></h4>
+						<p><center>affected commuters <br> in Hamburg</center></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fh5co-section">
+			<div class="container">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<p>On 5 October 2017, storm <a href="https://de.wikipedia.org/wiki/Sturmtief_Xavier">Xavier</a> hit Northern Germany in the early afternoon and led to a rare breakdown of local and long-distance railway traffic in the region. In many places, fallen trees were the reason why the tracks could only be cleared after days. We have approached this problem with the help of a series of geodata analyses at the <a href="https://dbmindbox.com/db-opendata-hackathons/hackathons/hamburg/">ITS-Hackathon 2017</a>.</p>
+			</div>
+			</div>
+		</div>
+
+		<div id="deutschland" class="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h2 class="wow slideInUp">The rail network</h2>
+						<p>
+						With over 33,000 km, Deutsche Bahn has the longest <a href="http://fahrweg.dbnetze.com/fahrweg-de/unternehmen/db_netz_ag/wirueberuns.html">railway network</a> in Europe. Up to 41,000 employees are responsible for restoring regular driving operations, particularly during storms and weather-related breakdowns.<p>
+						<p>Since around <a href="http://www.stuttgarter-zeitung.de/inhalt.pendler-in-deutschland-auto-ist-beliebtestes-verkehrsmittel.26c1a933-18a9-4c21-ab62-0b833283fddc.html">4.5 million commuters</a> rely on the smooth operation of the railway infrastructure every day, it is of crucial importance for the economy. In addition to DB Netz AG and the railway undertakings, a large number of companies are therefore directly affected by damage to the railway infrastructure.</p>
+					</div>
+					<div class="col-md-6">
+						<div class="wow slideInUp">
+							<img src="images/d_railways.png" alt="image" class="img-responsive">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="wow slideInUp">
+							<img src="images/d_forests.png" alt="image" class="img-responsive">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h2 class="wow slideInUp">The Forest</h2>
+						<p>Although repeatedly sections of the track have to be closed by fallen trees, there are <a href="http://www.schortens.de/files/vorgaben_f__r_pflanzungen.pdf">good reasons</a> to leave trees near tracks. The forest not only offers protection to the fauna and flora, but also trains.</p>
+						<p>Side winds pose a particular <a href="https://de.wikipedia.org/wiki/Seitenwindstabilität">danger</a> for high-speed trains. Since the contact surface is very large in relation to the track width, it is important to avoid tipping over in order to prevent any case. In addition to speed limits and technical solutions, trees and forests can therefore partly support <a href="http://www.schortens.de/files/vorgaben_f__r_pflanzungen.pdf">crosswind stability</a>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fh5co-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h2 class="wow slideInUp">Which routes are at risk?</h2>
+						
+						<p>Our analysis has shown that routes in the north and east of Germany are particularly at risk.</p>
+						<p>The red coloured sections of the route lead through coniferous forests, which are more vulnerable to storms because of their shallow roots.</p>
+						<p>The Hamburg-Berlin and Hamburg-Hannover high-speed rail lines, for example, are clearly visible and have been severely affected by storm Xavier. Not included in the evaluation is the susceptibility of a route to hurricanes per se.</p>
+					</div>
+					<div class="col-md-6">
+						<div class="wow slideInUp">
+							<img src="images/d_danger.png" alt="image" class="img-responsive">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fh5co-section">
+			<div class="container">
+
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Was Xavier special?</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<p>Xavier struck at the beginning of October 2017 and was thus unusually early for a hurricane. In the <a href="https://de.wikipedia.org/wiki/Liste_von_Wetterereignissen_in_Europa#Liste">long-term average</a>, storms tend to occur in the form of the winter storm. Early storms have a higher effect because they hit leafy trees, which then fall down faster.</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+						<iframe id="datawrapper-chart-F3eJS" src="http://datawrapper.dwcdn.net/F3eJS/1/" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" style="width: 0; min-width: 100% !important;" height="494"></iframe>
+				</div>
+			</div>
+		</div>
+		</div>
+
+
+		<div id="gefahren" class="fh5co-parallax" style="background-image: url(images/header_trees_2.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+						<div class="fh5co-intro fh5co-table-cell">
+							<h1 class="text-center">What makes a tree dangerous for the railway?</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fh5co-section">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<i class="icon-circle-compass"></i>
+							</div>
+							<div class="fh5co-text">
+								<h3 class="wow slideInUp">Distance to the track &amp; overhead line</h3>
+								<p>Trees can pose a hazard to rail transport if they are higher than their distance from the track.</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<i class="icon-layers"></i>
+							</div>
+							<div class="fh5co-text">
+								<h3 class="wow slideInUp">Root depth</h3>
+								<p>A distinction is made between pile, heart and shallow roots in trees, whereby the greatest risk in a storm comes from the shallow roots.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<i class="icon-grid"></i>
+							</div>
+							<div class="fh5co-text">
+								<h3 class="wow slideInUp">Soil condition</h3>
+								<p>Loose sandy soils generally provide trees with less support than heavy clay soils. </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="fh5co-feature animate-box" data-animate-effect="fadeInLeft">
+							<div class="fh5co-icon">
+								<i class="icon-compass2"></i>
+							</div>
+							<div class="fh5co-text">
+								<h3 class="wow slideInUp">Wind speed &amp; -direction</h3>
+								<p>Ultimately, of course, the wind force determines whether a tree is a hazard for the track.</p>
+							</div>
+						</div>
+					</div>
+
+				</div> <br>
+
+				<div class="col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+					<p>Not every tree and forest represents the same threat to the road network. Depending on the wind force and direction, it is above all the interaction between distance from the track, root depth and soil conditions that determine the risk of a tree.
+					Trees with pile and cardiac root systems are often characterized by a very dense and deep root system. For example, if you stand on firm clay soil, they can withstand storms longer than trees with flat roots on sandy soil.</p>
+				</div>
+
+			</div>
+		</div>
+
+
+		<div id="hamburg" class="fh5co-parallax" style="background-image: url(images/header_subway_hh.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+						<div class="fh5co-intro fh5co-table-cell">
+							<h1 class="text-center">Storms at the Alster</h1>
+							<p>Focus on Hamburg</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fh5co-section">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-12">
+						<h2>A data analysis to assess the threat to Hamburg's rail traffic</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<p>For our analysis, we looked at all the trees in a 20m distance to a railway line in sandy ground. Similarly, we have only taken into account trees that are on public areas and to which authorities have easy access.</p>
+					</div>
+						<div class="col-md-6">
+						<p>The map shows a section of the Hamburg area's route network. Based on the classification, we have identified several problem areas. Tunnel sections are not yet taken into account, so that the City Tunnel, for example, is erroneously listed as a hotspot.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<iframe width="100%" height="650" frameborder="0" src="https://akeem.carto.com/viz/403e835d-b9b9-4237-aa16-fb6ef44a8ca2/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+					</div>
+				</div>
+
+			<div class="fh5co-section">
+				<div class="container">
+
+				<div class="row">
+					<div class="col-md-12">
+						<h2>A simulation of falling trees</h2>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<p>With the help of wind direction data and information about the height of the trees, we can identify possible problem areas.
+						Use the map below to determine these risk-prone sections of the route.</p>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+							<iframe width="100%" height="750" frameborder="0" src="http://46.101.153.57/karte/karte_en.html" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+			</div>
+
+		</div>
+	</div>
+
+	</div>
+
+
+	<footer id="fh5co-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<h3>About this project</h3>
+					<p>This project was developed as part of the <a href="https://dbmindbox.com/db-opendata-hackathons/hackathons/hamburg/">ITS-Hackathon 2017</a> on 20/21 October 2017 in Hamburg and is to be understood as a proof of concept.</p>
+					<p>Have you encountered any questions, comments or errors? We look forward to receiving your <a href="mailto:achim.tack@civity.de">mail</a>.</p>
+				</div>
+				
+				<div class="col-md-4">
+					<h3>The Team</h3>
+					<p>We are analysts at the management consultancy <a target="_blank" href="http://www.civity.de">civity</a> and have created this project in our spare time.</p>
+					<p>Volker, Moritz, Björn, Achim</p>
+				</div>
+
+				<div class="col-md-3">
+					<h3>Documentation &amp;  Datasources</h3>
+					<ul class="fh5co-social">
+						<li><a href="https://github.com/bjoernhartmann/its-hackathon-hamburg/"><i class="icon-github"></i> <span>GitHub</span></a></li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-md-12 fh5co-copyright text-center">
+					<p><small>&copy; 2017 | Images: <a href="http://unsplash.com" target="_blank">Unsplash</a></small></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>

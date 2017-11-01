@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.1.0/css/ol.css" type="text/css">
+    <style>
+	.body {
+	height: 100%
+	}
+	 .map {
+        height: 100%;
+        width: 100%;
+      }
+ </style>
+    <script src="https://openlayers.org/en/v4.1.0/build/ol.js" type="text/javascript"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> <!--<h2>jquery/ajax</h2>-->
+	<script src="https://code.jquery.com/ui/jquery-ui-git.js"></script> 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+
+	
+	<link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/jquery-ui-git.css">
+	<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	
+	<form action="filter.php" method="post"> <!--php-script für submit-button-->
+		<div class="form-group">
+		 <label >Simulierte Baumh&ouml;he in Metern</label>
+		 <input name = "entf" class="form-control" id="entf" type='number' placeholder="" >
+
+		 <label >Simulierter Sturzwinkel in Grad</label>
+		 <input name = "winkel" class="form-control" id="winkel" type='number' placeholder="" >
+		 <div id="winkel_slider"> </div>
+		 <button type="submit" name="filter_button" id="filter_button" class="btn btn-default">Simulation starten</button>
+	  </form>
+        </div>
+  </head>
+<body>
+	<div id="map" class="map"></div>
+	    <script type="text/javascript">
+	
+	
+		// osm baselayer
+		//var layerOSM = new ol.layer.Tile({
+		//	source: new ol.source.OSM(),
+		//	visible: true
+		//});
+
+
+		var layerOSM = new ol.layer.Tile({
+			source: new ol.source.XYZ({
+				url: 'http://{1-4}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
+			})
+		});
+	
+		// Layer aus geojson vom server wird erstellt
+		 var vectorLayer = new ol.layer.Vector({
+			visible: true,
+			source: new ol.source.Vector({
+				url: 'pg2geojsonfit.php?table=its_hackathon.baeume_50m_dwithin&srid=4326&geocol=geom',
+				format: new ol.format.GeoJSON()
+			 }),
+			 style: new ol.style.Style({
+				image: new ol.style.RegularShape({
+				fill: new ol.style.Fill({color: '#59a862'}),
+				radius: 3,
+				points: 8 
+			    })
+			})
+		  });
+	  
+	  		// Layer aus geojson vom server wird erstellt
+		 var bahnLayer = new ol.layer.Vector({
+			visible: true,
+			source: new ol.source.Vector({
+				url: 'db_netz.json',
+				format: new ol.format.GeoJSON()
+			 }),
+			style: new ol.style.Style({
+					'fill': new ol.style.Fill({
+				color: '#ff32af'
+			}),
+			'stroke': new ol.style.Stroke({
+				color: '#ff32af',
+				width: 2.0
+			})
+		}),
+			
+	  });
+
+	 
+	// Start ansichtspunkt + zoom
+	var view = new ol.View({
+          center: ol.proj.fromLonLat([10.02, 53.55]), // von lonlat nach web-mercator
+          zoom: 17
+		  });
+	// map
+	var map = new ol.Map({
+        target: 'map',
+        layers: [ 
+		  bahnLayer,
+		  layerOSM,
+		  vectorLayer
+        ]
+      });
+	  
+	  map.setView(view);
+
+	var treeVectorLayer = null;
+
+	var treeLayerStyle = new ol.style.Style({
+		'fill': new ol.style.Fill({
+			color: '#ff32af'
+		}),
+		'stroke': new ol.style.Stroke({
+			color: '#ff32af',
+			width: 2.0
+		})
+	});
+
+	  
+	   $(function () {
+
+		document.getElementById('winkel').value = 120;
+
+		document.getElementById('entf').value = 0;
+
+		 $( "#winkel_slider" ).slider({
+			min: 0,
+			max: 360,
+			slide: function(evt, ui) {
+				document.getElementById('winkel').value = ui.value;
+				_.throttle(function() {
+					console.log('slider...');
+					submitFormUpdateMap();
+				}, 100);
+			}
+		});
+
+		function submitFormUpdateMap(e) {
+			if (window.treeVectorLayer !== null) {
+				map.removeLayer(window.treeVectorLayer);
+				delete window.treeVectorLayer;
+			}
+
+			if (e) {
+				e.preventDefault();//prevents opening a new site
+			}
+
+			$.ajax({
+				type: 'post',
+				url: 'filter.php',
+				data: $('form').serialize(),
+				dataType: "json",
+				success: function (result) {
+					var vectorSource = new ol.source.Vector({
+						features: (new ol.format.GeoJSON()).readFeatures(result)
+					});
+					treeVectorLayer = new ol.layer.Vector({
+						source: vectorSource,
+						style: treeLayerStyle
+					});
+					map.addLayer(treeVectorLayer); 
+				}// success
+			});//ajax
+		};//function 
+
+		$('#filter_button').click(submitFormUpdateMap);
+      });
+	      </script>
+  </body>
+</html>

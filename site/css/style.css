@@ -18,7 +18,7 @@ body {
   line-height: 1.7;
   color: #777777;
   color: #7f7f7f;
-  background: #fff;
+  background: #f6f5f3;
   height: 100%;
   position: relative;
 }
@@ -101,8 +101,9 @@ h4{
   width: 100%;
   z-index: 1;
   height: 470px;
-  background: #333333;
+  background: #8e8a75;
   font-size: 18px;
+  color: #181712;
 }
 @media screen and (max-width: 992px) {
   #fh5co-footer {
@@ -118,8 +119,9 @@ h4{
   line-height: 1.5;
 }
 #fh5co-footer h3 {
-  color: #fff;
+  color: #181712;
   font-size: 20px;
+  font-weight: 500;
 }
 #fh5co-footer a {
   color: rgba(255, 255, 255, 0.7);
